@@ -1,0 +1,14 @@
+@startuml Christian
+skinparam classAttributeIconSize 0
+caption Diagrama de entidades
+namespace entidades {
+    class Usuário {
+        - String nome
+        - String senha
+        + Usuário(nome:String)
+        + getNome():String
+        + setNome(nome:String):void
+        + getSenha():String
+    }
+}
+@enduml

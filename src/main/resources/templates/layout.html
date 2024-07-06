@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+    <head th:fragment="htmlhead">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/webjars/jquery-ui/1.13.2/jquery-ui.css}" />
+        <link rel="stylesheet" th:href="@{/site.css}" />
+    </head>
+    
+    <body>                 
+        <nav th:fragment="menu" class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #6f42c1;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/" style="color: #eaecf1;" >Minerva</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/" style="color: #eaecf1;">Home</a>
+                  <a class="nav-link" href="/fichas" style="color: #eaecf1;">Fichas</a>
+                  <a class="nav-link" href="/createficha" style="color: #eaecf1;">Crie</a>
+                  <a class="nav-link" href="/login" style="color: #eaecf1;">Login</a>
+                </div>
+              </div>
+
+            </div>
+          </nav>
+  
+    <div th:fragment="footer" id="footer">
+            <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+        </div>
+    </div>
+
+    </body>
+</html>

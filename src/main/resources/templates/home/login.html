@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+    <head th:include="layout :: htmlhead"></head>
+    <body>
+        <nav th:replace="layout :: menu" >(menu)</nav>
+        <h1>Faça o Login Para Criar e Acessar Fichas RPG</h1>
+        
+        <form class="row g-3" th:action="@{/login}" method="post">
+          <div class="col-auto">
+              <label for="exampleFormControlInput1" class="visually-hidden">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+          </div>
+          <div class="col-auto">
+              <label for="inputPassword2" class="visually-hidden">Password</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="Password" name="senha">
+          </div>
+          <div class="col-auto">
+            <label for="Nome" class="visually-hidden">Nome</label>
+            <input type="nome" class="form-control" id="Nome" placeholder="Nome" name="nome">
+          </div>
+          <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+          </div>
+      </form>
+
+        <table class="table">
+            <thead>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Senha</th>
+            </thead>
+            <tbody>
+              <tr th:each = "umUsuário : ${listaUsuário}">
+                <td th:text = "${umUsuário.nome}"></td>
+                <td th:text = "${umUsuário.email}"></td>
+                <td th:text = "${umUsuário.senha}"></td>
+              </tr>
+            </tbody>
+          </table>
+        <div th:include="layout :: footer">(footer)</div>
+    </body>
+<html>

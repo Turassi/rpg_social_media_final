@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+    <head th:include="layout :: htmlhead"></head>
+    <body>
+        <nav th:replace="layout :: menu" >(menu)</nav>
+        <h1>Crie Sua Ficha RPG</h1>
+
+        <div class="col-auto">
+            <label for="formFile" class="visually-hidden">Insira seu PDF</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <div th:include="layout :: footer">(footer)</div>
+    </body>
+<html>

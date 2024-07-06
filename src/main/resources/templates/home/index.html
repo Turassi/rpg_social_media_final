@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minerva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav th:replace="layout :: menu">(menu)</nav>
+    <h1>Mensagem de exemplo</h1>
+    <div th:include="layout :: footer">(footer)</div>
+</body>
+</html>
